@@ -11,7 +11,7 @@ namespace LoginExercise.Pages
 {
 
 
-    public partial class Profile1
+    public partial class Profile
     {
 
         /// <summary>

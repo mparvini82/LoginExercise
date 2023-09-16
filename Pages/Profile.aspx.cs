@@ -8,10 +8,29 @@ using System.Web.UI.WebControls;
 
 namespace LoginExercise.Pages
 {
-    public partial class Profile1 : System.Web.UI.Page
+    public partial class Profile : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
+            int PersonID = (int)Session["ID"];
+            if (!IsPostBack)
+            {
+
+                using (TestEntities db = new TestEntities())
+                {
+                    var user = db.Users.FirstOrDefault(usr => usr.Personid == PersonID);
+                    firstname.Text = user.Firstname;
+                    lastname.Text = user.Lastname;
+                    Email.Text = user.Email;
+                    Gender.Text = user.Gender;
+                    Address.Text = user.Address;
+                    aboutme.Text = user.About_Me;
+                    City.Text = user.City;
+                    Country.Text = user.Country;
+                    Postalcode.Text = user.Postal_Code;
+                }
+            }
 
         }
 

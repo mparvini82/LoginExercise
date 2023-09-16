@@ -18,28 +18,28 @@ namespace LoginExercise
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //string currentPage = Path.GetFileName(Request.Url.AbsolutePath);
+            string currentPage = Path.GetFileName(Request.Url.AbsolutePath);
 
-            //if (currentPage.Equals("MainPage.aspx"))
-            //{
-            //    nav1.Attributes["class"] = "nav-link active";
-            //}
-            //else if (currentPage.Equals("Profile.aspx"))
-            //{
-            //    nav2.Attributes["class"] = "nav-link active";
-            //}
-            //// Add more conditions for other nav items
+            if (currentPage.Equals("MainPage.aspx"))
+            {
+                nav1.Attributes["class"] = "nav-link active";
+            }
+            else if (currentPage.Equals("Profile.aspx"))
+            {
+                nav2.Attributes["class"] = "nav-link active";
+            }
+            // Add more conditions for other nav items
 
-            //// Remove active class from other nav items
-            //if (!currentPage.Equals("WebForm1.aspx"))
-            //{
-            //    nav1.Attributes["class"] = "nav-link";
-            //}
-            //if (!currentPage.Equals("WebForm2.aspx"))
-            //{
-            //    nav2.Attributes["class"] = "nav-link";
-            //}
-            //// Remove active class from other nav items
+            // Remove active class from other nav items
+            if (!currentPage.Equals("MainPage.aspx"))
+            {
+                nav1.Attributes["class"] = "nav-link";
+            }
+            if (!currentPage.Equals("Profile.aspx"))
+            {
+                nav2.Attributes["class"] = "nav-link";
+            }
+            // Remove active class from other nav items
         }
         protected void tab1_Load(object sender, EventArgs e)
         {
