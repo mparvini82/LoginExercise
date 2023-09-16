@@ -309,6 +309,7 @@
     <Content Include="Pages\MainPage.aspx" />
     <Content Include="Pages\ProductsShop.aspx" />
     <Content Include="Pages\Profile.aspx" />
+    <Content Include="Pages\UsersTable.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Pages\Login.aspx" />
@@ -594,7 +595,6 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
-    <Content Include="Pages\UsersTable.aspx" />
     <Content Include="Pages\SignUp.aspx" />
     <Content Include="web.config" />
     <None Include="web.Debug.config">
@@ -648,6 +648,13 @@
     <Compile Include="Pages\Profile.aspx.designer.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\UsersTable.aspx.cs">
+      <DependentUpon>UsersTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UsersTable.aspx.designer.cs">
+      <DependentUpon>UsersTable.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Pages\SignUp.aspx.cs">
       <DependentUpon>SignUp.aspx</DependentUpon>
@@ -669,13 +676,6 @@
     </Compile>
     <Compile Include="Pages\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\UsersTable.aspx.cs">
-      <DependentUpon>UsersTable.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\UsersTable.aspx.designer.cs">
-      <DependentUpon>UsersTable.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>

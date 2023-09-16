@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LoginExercise.Pages
+namespace LoginExercise
 {
 
 

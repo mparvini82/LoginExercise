@@ -28,6 +28,10 @@ namespace LoginExercise
             {
                 nav2.Attributes["class"] = "nav-link active";
             }
+            else if (currentPage.Equals("UsersTable.aspx"))
+            {
+                nav3.Attributes["class"] = "nav-link active";
+            }
             // Add more conditions for other nav items
 
             // Remove active class from other nav items
@@ -38,6 +42,10 @@ namespace LoginExercise
             if (!currentPage.Equals("Profile.aspx"))
             {
                 nav2.Attributes["class"] = "nav-link";
+            }
+            if (!currentPage.Equals("UsersTable.aspx"))
+            {
+                nav3.Attributes["class"] = "nav-link";
             }
             // Remove active class from other nav items
         }

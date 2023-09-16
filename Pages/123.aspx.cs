@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace LoginExercise.Pages
+namespace LoginExercise
 {
     public partial class UsersTable : System.Web.UI.Page
     {

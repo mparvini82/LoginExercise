@@ -52,8 +52,8 @@ namespace LoginExercise.Pages
                 user.About_Me = aboutme.Text;
                 db.SaveChanges();
             }
-            int x = 2;
-            Response.Redirect("MainPage.aspx?UserType=" + x);
+            
+          
         }
     }
 }
