@@ -12,7 +12,14 @@ namespace LoginExercise.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            using (TestEntities db = new TestEntities())
+            {
+                if (!IsPostBack)
+                {
+                    GridView1.DataSource = db.Users.ToList();
+                    GridView1.DataBind();
+                }
+            }
         }
         protected void MakeAdminButton_Command(object sender, CommandEventArgs e)
         {

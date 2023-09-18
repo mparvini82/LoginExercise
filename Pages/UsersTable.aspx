@@ -7,7 +7,7 @@
         <hr />
 
         
-            <asp:GridView CssClass="table table-hover" ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Personid" DataSourceID="SqlDataSource1">
+            <asp:GridView CssClass="table table-hover" ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Personid">
                 <Columns>
                     <asp:CommandField ShowDeleteButton="True" HeaderText="Action" DeleteText="Delete" ShowEditButton="True" EditText="Edit" ControlStyle-CssClass="btn btn-light d-inline" UpdateText="Update" CancelText="Cancel" />
                     <asp:BoundField DataField="Firstname" HeaderText="First Name" InsertVisible="False" />
@@ -21,13 +21,6 @@
                     </asp:TemplateField>
                 </Columns>
             </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=192.168.100.35\sql2022;Initial Catalog=Test;Persist Security Info=True;User ID=sa;Password=Elentr@2022" 
-                DeleteCommand="DELETE FROM Users WHERE PersonID = @PersonID" 
-                InsertCommand="INSERT INTO [Users] ([Firstname], [Lastname], [Email],[Password]) VALUES (@Firstname, @Lastname, @Email,@Password)" 
-                ProviderName="System.Data.SqlClient" 
-                SelectCommand="SELECT * FROM Users " 
-                UpdateCommand="UPDATE Users SET Firstname = @Firstname , Lastname=@Lastname ,Email=@Email ,Password=@Password   WHERE PersonID = @PersonID">
-            </asp:SqlDataSource>
    
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
