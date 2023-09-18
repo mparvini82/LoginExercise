@@ -11,13 +11,25 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using LoginExercise.model;
 
 namespace LoginExercise
 {
     public partial class Site1 : System.Web.UI.MasterPage
     {
+        
         protected void Page_Load(object sender, EventArgs e)
         {
+            int PersonID = (int)Session["ID"];
+            using (TestEntities db = new TestEntities())
+            {
+                var user = db.Users.FirstOrDefault(usr => usr.Personid == PersonID);
+                if (user.Accesslevel < 2)
+                {
+                    nav3.Visible=true;
+                }
+            }
+            
             string currentPage = Path.GetFileName(Request.Url.AbsolutePath);
 
             if (currentPage.Equals("MainPage.aspx"))
