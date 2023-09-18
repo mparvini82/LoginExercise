@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
       
-        <h1>Edit Profile</h1>
+        <h1>Users Management</h1>
         <hr />
 
         
@@ -23,7 +23,7 @@
             </asp:GridView>
    
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+   <%-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>--%>
 </asp:Content>
