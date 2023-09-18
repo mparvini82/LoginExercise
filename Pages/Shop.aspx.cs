@@ -26,5 +26,21 @@ namespace LoginExercise
             }
             catch (System.Exception) { }
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            AddProductPopUp.Show();
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            using (TestEntities db = new TestEntities())
+            {
+                var product = new Shop();
+                product.Name = TextBox1.ToString();
+                product.Price = TextBox2.ToString();
+                
+            }
+        }
     }
 }
