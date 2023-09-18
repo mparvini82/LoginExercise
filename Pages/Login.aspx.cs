@@ -29,7 +29,7 @@ namespace LoginExercise
                     if (hashedpassword == Password_Hasher(passwordtxt.Text))
                     {
                         Session["ID"] = user.Personid;
-                        Response.Redirect("MainPage.aspx?UserType=" + user.Accesslevel.Value);
+                        Response.Redirect("Dashboard.aspx");
 
                     }
                     else

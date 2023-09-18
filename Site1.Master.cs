@@ -31,7 +31,7 @@ namespace LoginExercise
             
             string currentPage = Path.GetFileName(Request.Url.AbsolutePath);
 
-            if (currentPage.Equals("MainPage.aspx"))
+            if (currentPage.Equals("Dashboard.aspx"))
             {
                 nav1.Attributes["class"] = "nav-link active";
             }
@@ -43,14 +43,14 @@ namespace LoginExercise
             {
                 nav3.Attributes["class"] = "nav-link active";
             }
-            else if (currentPage.Equals("ProductsShop.aspx"))
+            else if (currentPage.Equals("Shop.aspx"))
             {
                 nav4.Attributes["class"] = "nav-link active";
             }
             // Add more conditions for other nav items
 
             // Remove active class from other nav items
-            if (!currentPage.Equals("MainPage.aspx"))
+            if (!currentPage.Equals("Dashboard.aspx"))
             {
                 nav1.Attributes["class"] = "nav-link";
             }
@@ -62,7 +62,7 @@ namespace LoginExercise
             {
                 nav3.Attributes["class"] = "nav-link";
             }
-            if (!currentPage.Equals("ProductsShop.aspx"))
+            if (!currentPage.Equals("Shop.aspx"))
             {
                 nav4.Attributes["class"] = "nav-link";
             }

@@ -30,10 +30,10 @@
             <div class="col-2 position-fixed border border-secondary m-3" style="border-radius: 10px; height: 100%;">
                 <div class="pt-3 ps-4 pe-2">
                     <div class="nav flex-column nav-pills position-fixed" role="tablist" id="v-pills-tab" aria-orientation="vertical">
-                       <a class="nav-link active" id="nav1" runat="server" data-toggle="pill" href="~/Pages/MainPage.aspx" role="tab" aria-controls="v-pills-home" aria-selected="true">Dashboard</a>
+                       <a class="nav-link active" id="nav1" runat="server" data-toggle="pill" href="~/Pages/Dashboard.aspx" role="tab" aria-controls="v-pills-home" aria-selected="true">Dashboard</a>
                             <a class="nav-link" id="nav2" runat="server" data-toggle="pill" href="~/Pages/Profile.aspx" role="tab" aria-controls="v-pills-profile" aria-selected="false">Edit Profile</a>
                             <a class="nav-link" id="nav3" runat="server" data-toggle="pill" href="~/Pages/UsersTable.aspx" role="tab" aria-controls="v-pills-messages" aria-selected="false" visible="false">Manage Users</a>
-                            <a class="nav-link" id="nav4" runat="server" data-toggle="pill" href="~/Pages/ProductsShop.aspx" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+                            <a class="nav-link" id="nav4" runat="server" data-toggle="pill" href="~/Pages/Shop.aspx" role="tab" aria-controls="v-pills-settings" aria-selected="false">Shop</a>
                         </div>
                 </div>
             </div>
