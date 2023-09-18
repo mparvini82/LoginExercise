@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LoginExercise.model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,19 @@ namespace LoginExercise.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            int PersonID = (int)Session["ID"];
+            using (TestEntities db = new TestEntities())
+            {
+                var user = db.Users.FirstOrDefault(usr => usr.Personid == PersonID);
 
+                name.InnerText = user.Firstname;
+                about.InnerText = user.About_Me;
+                info.InnerText = user.City;
+                fullname.InnerText = user.Firstname + " " + user.Lastname;
+                phone.InnerText = user.Postal_Code;
+                adress.InnerText = user.Address;
+                email.InnerText = user.Email;
+            }
         }
     }
 }
