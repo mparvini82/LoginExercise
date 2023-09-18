@@ -9,33 +9,38 @@
                     <div class="card-header pb-0">
                         <div class="d-flex align-items-center">
                             <p class="mb-0">Edit Profile</p>
-                            
                         </div>
                     </div>
                     <div class="card-body">
                         <p class="text-uppercase text-sm">User Information</p>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-1">
                                 <div class="form-group">
                                     <label for="example-text-input" class="form-control-label">Firstname</label>
-                                    <asp:TextBox ID="firstname" runat="server"></asp:TextBox>
+                                    <br />
+                                    <label for="example-text-input" class="form-control-label">Lastname</label>
+                                    
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-5">
                                 <div class="form-group">
-                                    <label for="example-text-input" class="form-control-label">Lastname</label>
+                                    <asp:TextBox ID="firstname" runat="server"></asp:TextBox>
+                                    <br />
                                     <asp:TextBox ID="lastname" runat="server"></asp:TextBox>
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-1">
                                 <div class="form-group">
                                     <label for="example-text-input" class="form-control-label">Email</label>
-                                    <asp:TextBox ID="Email" runat="server"></asp:TextBox>
+                                    <br />
+                                    <label for="example-text-input" class="form-control-label">Gender</label>
+                                    
                                 </div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-5">
                                 <div class="form-group">
-                                    <label for="example-text-input" class="form-control-label">Gender</label>
+                                    <asp:TextBox ID="Email" runat="server"></asp:TextBox>
+                                    <br />
                                     <asp:TextBox ID="Gender" runat="server"></asp:TextBox>
                                 </div>
                             </div>
@@ -43,28 +48,37 @@
                         <hr class="horizontal dark">
                         <p class="text-uppercase text-sm">Contact Information</p>
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-1">
                                 <div class="form-group">
+
                                     <label for="example-text-input" class="form-control-label">Address</label>
-                                    <asp:TextBox ID="Address" runat="server"></asp:TextBox>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-group">
+                                    <br />
                                     <label for="example-text-input" class="form-control-label">City</label>
-                                    <asp:TextBox ID="City" runat="server"></asp:TextBox>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <asp:TextBox ID="Address" runat="server"></asp:TextBox>
+                                    <br />
+                                    <asp:TextBox ID="City" runat="server"></asp:TextBox>
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-1">
                                 <div class="form-group">
                                     <label for="example-text-input" class="form-control-label">Country</label>
-                                    <asp:TextBox ID="Country" runat="server"></asp:TextBox>
+                                    <br />
+                                    <label for="example-text-input" class="form-control-label">Postal code</label>
+                                   
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-5">
                                 <div class="form-group">
-                                    <label for="example-text-input" class="form-control-label">Postal code</label>
+                                    
                                     <asp:TextBox ID="Postalcode" runat="server"></asp:TextBox>
+                                    <br />
+                                    <asp:TextBox ID="Country" runat="server"></asp:TextBox>
                                 </div>
                             </div>
                         </div>

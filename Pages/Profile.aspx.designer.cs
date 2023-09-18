@@ -69,15 +69,6 @@ namespace LoginExercise.Pages
         protected global::System.Web.UI.WebControls.TextBox City;
 
         /// <summary>
-        /// Country control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Country;
-
-        /// <summary>
         /// Postalcode control.
         /// </summary>
         /// <remarks>
@@ -85,6 +76,15 @@ namespace LoginExercise.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Postalcode;
+
+        /// <summary>
+        /// Country control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Country;
 
         /// <summary>
         /// aboutme control.
