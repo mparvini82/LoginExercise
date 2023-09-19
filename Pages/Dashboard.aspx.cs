@@ -25,8 +25,14 @@ namespace LoginExercise.Pages
                 phone.InnerText = user.Postal_Code;
                 adress.InnerText = user.Address;
                 email.InnerText = user.Email;
-                if (File.Exists("C:\\Users\\parvini\\Desktop\\LoginExercise\\ProfilePictures\\35.png" + PersonID.ToString() + ".png")){
-                    img.ImageUrl = "~/ProfilePictures/" + PersonID.ToString() + ".png";
+                string directoryPath = Server.MapPath("~/ProfilePictures/");
+                string fileNamePattern = PersonID.ToString() + ".*";
+                string[] matchingFiles = Directory.GetFiles(directoryPath, fileNamePattern);
+
+                if (matchingFiles.Length > 0)
+                {
+                    string firstMatchingFile = matchingFiles[0]; // Assuming you want to use the first matching file
+                    img.ImageUrl = "~/" + firstMatchingFile.Replace(Server.MapPath("~"), string.Empty);
                 }
             }
         }

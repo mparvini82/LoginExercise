@@ -51,8 +51,19 @@ namespace LoginExercise.Pages
                 user.Country = Country.Text;
                 user.City = City.Text;
                 user.Postal_Code = Postalcode.Text;
+                string directoryPath = Server.MapPath("~/ProfilePictures/");
+                string fileNamePattern = personID.ToString() + ".*";
+                string[] matchingFiles = Directory.GetFiles(directoryPath, fileNamePattern);
 
-                profilePictureUpload.SaveAs(Server.MapPath("~/ProfilePictures/" + personID + System.IO.Path.GetExtension(profilePictureUpload.FileName).ToLower()));
+                if (matchingFiles.Length > 0)
+                {
+                    File.Delete(matchingFiles[0]);
+                }
+                else
+                {
+
+                    profilePictureUpload.SaveAs(Server.MapPath("~/ProfilePictures/" + personID + System.IO.Path.GetExtension(profilePictureUpload.FileName).ToLower()));
+                }
 
             }
         }
