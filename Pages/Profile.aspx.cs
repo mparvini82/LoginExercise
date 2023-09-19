@@ -1,6 +1,8 @@
 ﻿using LoginExercise.model;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Validation;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -36,11 +38,11 @@ namespace LoginExercise.Pages
 
         protected void save_Click(object sender, EventArgs e)
         {
-            int PersonID = (int)Session["ID"];
+            int personID = (int)Session["ID"];
 
             using (TestEntities db = new TestEntities())
             {
-                var user = db.Users.FirstOrDefault(usr => usr.Personid == PersonID);
+                var user = db.Users.FirstOrDefault(usr => usr.Personid == personID);
                 user.Firstname = firstname.Text;
                 user.Lastname = lastname.Text;
                 user.Email = Email.Text;
@@ -49,11 +51,21 @@ namespace LoginExercise.Pages
                 user.Country = Country.Text;
                 user.City = City.Text;
                 user.Postal_Code = Postalcode.Text;
-                user.About_Me = aboutme.Text;
-                db.SaveChanges();
+                string directoryPath = Server.MapPath("~/ProfilePictures/");
+                string fileNamePattern = personID.ToString() + ".*";
+                string[] matchingFiles = Directory.GetFiles(directoryPath, fileNamePattern);
+
+                if (matchingFiles.Length > 0)
+                {
+                    File.Delete(matchingFiles[0]);
+                }
+                else
+                {
+
+                    profilePictureUpload.SaveAs(Server.MapPath("~/ProfilePictures/" + personID + System.IO.Path.GetExtension(profilePictureUpload.FileName).ToLower()));
+                }
+
             }
-            
-          
         }
     }
 }
