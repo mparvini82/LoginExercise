@@ -14,10 +14,9 @@ namespace LoginExercise.model
     
     public partial class Shop
     {
-        public string ProductID { get; set; }
+        public int ProductID { get; set; }
         public string Name { get; set; }
         public string Rate { get; set; }
-        public string Price { get; set; }
-        public string Picture { get; set; }
+        public Nullable<long> Price { get; set; }
     }
 }

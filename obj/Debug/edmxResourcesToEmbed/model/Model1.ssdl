@@ -10,11 +10,10 @@ warning 6013: The table/view 'Test.dbo.ProfileImg' does not have a primary key d
     <Key>
       <PropertyRef Name="ProductID" />
     </Key>
-    <Property Name="ProductID" Type="nchar" MaxLength="10" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" MaxLength="255" />
-    <Property Name="Rate" Type="nvarchar" MaxLength="255" />
-    <Property Name="Price" Type="nchar" MaxLength="10" />
-    <Property Name="Picture" Type="nvarchar" MaxLength="255" />
+    <Property Name="ProductID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Rate" Type="nvarchar" MaxLength="50" />
+    <Property Name="Price" Type="bigint" />
   </EntityType>
   <EntityType Name="Users">
     <Key>
@@ -32,6 +31,7 @@ warning 6013: The table/view 'Test.dbo.ProfileImg' does not have a primary key d
     <Property Name="Country" Type="nvarchar" MaxLength="50" />
     <Property Name="Postal Code" Type="nvarchar" MaxLength="50" />
     <Property Name="About Me" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProfilePicture" Type="varbinary" MaxLength="50" />
   </EntityType>
   <EntityContainer Name="TestModelStoreContainer">
     <EntitySet Name="Shop" EntityType="Self.Shop" Schema="dbo" store:Type="Tables" />

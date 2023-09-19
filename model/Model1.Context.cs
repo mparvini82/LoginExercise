@@ -25,7 +25,7 @@ namespace LoginExercise.model
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<Shop> Shop { get; set; }
         public DbSet<Users> Users { get; set; }
+        public DbSet<Shop> Shop { get; set; }
     }
 }

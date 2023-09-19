@@ -227,9 +227,9 @@
     <Content Include="bin\roslyn\VBCSCompiler.exe" />
     <Content Include="docs\documentation.html" />
     <Content Include="gulpfile.js" />
-    <Content Include="Images\name1.jpg" />
-    <Content Include="Images\name2.jpg" />
-    <Content Include="Images\name3.jpg" />
+    <Content Include="Images\17.jpg" />
+    <Content Include="Images\18.jpg" />
+    <Content Include="Images\19.jpg" />
     <Content Include="index.html" />
     <Content Include="model\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -308,9 +308,10 @@
     <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\System.Xml.XPath.XDocument.dll" />
     <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\vbc.exe" />
     <Content Include="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\tools\RoslynLatest\VBCSCompiler.exe" />
-    <Content Include="Pages\Junkcodes.txt" />
     <Content Include="Pages\Dashboard.aspx" />
+    <Content Include="Pages\Junkcodes.txt" />
     <Content Include="Pages\Profile.aspx" />
+    <Content Include="Pages\Shop.aspx" />
     <Content Include="Pages\UsersTable.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -507,7 +508,6 @@
     <Content Include="bin\roslyn\VBCSCompiler.exe.config" />
     <Content Include="package.json" />
     <Content Include="README.md" />
-    <Content Include="Pages\Shop.aspx" />
     <EntityDeploy Include="model\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
@@ -643,6 +643,13 @@
     <Compile Include="Pages\Profile.aspx.designer.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Shop.aspx.cs">
+      <DependentUpon>Shop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Shop.aspx.designer.cs">
+      <DependentUpon>Shop.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\UsersTable.aspx.cs">
       <DependentUpon>UsersTable.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -671,13 +678,6 @@
     </Compile>
     <Compile Include="Pages\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Shop.aspx.cs">
-      <DependentUpon>Shop.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\Shop.aspx.designer.cs">
-      <DependentUpon>Shop.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

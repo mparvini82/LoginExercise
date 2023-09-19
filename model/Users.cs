@@ -26,5 +26,6 @@ namespace LoginExercise.model
         public string Country { get; set; }
         public string Postal_Code { get; set; }
         public string About_Me { get; set; }
+        public byte[] ProfilePicture { get; set; }
     }
 }
