@@ -309,6 +309,9 @@
     <Content Include="Pages\Dashboard.aspx" />
     <Content Include="Pages\Profile.aspx" />
     <Content Include="Pages\UsersTable.aspx" />
+    <Content Include="ProfilePictures\28.png" />
+    <Content Include="ProfilePictures\35.png" />
+    <Content Include="ProfilePictures\Default.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Pages\Login.aspx" />

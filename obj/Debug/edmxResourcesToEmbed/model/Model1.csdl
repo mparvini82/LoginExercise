@@ -26,6 +26,7 @@
     <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Postal_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="About_Me" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProfilePicture" Type="Binary" MaxLength="50" FixedLength="false" />
   </EntityType>
   <EntityContainer Name="TestEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Shop" EntityType="Self.Shop" />

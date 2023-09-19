@@ -1,6 +1,7 @@
 ﻿using LoginExercise.model;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -24,6 +25,9 @@ namespace LoginExercise.Pages
                 phone.InnerText = user.Postal_Code;
                 adress.InnerText = user.Address;
                 email.InnerText = user.Email;
+                if (File.Exists("C:\\Users\\parvini\\Desktop\\LoginExercise\\ProfilePictures\\35.png" + PersonID.ToString() + ".png")){
+                    img.ImageUrl = "~/ProfilePictures/" + PersonID.ToString() + ".png";
+                }
             }
         }
     }

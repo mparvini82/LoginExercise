@@ -15,6 +15,7 @@
     <EntitySetMapping Name="Users">
       <EntityTypeMapping TypeName="TestModel.Users">
         <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="ProfilePicture" ColumnName="ProfilePicture" />
           <ScalarProperty Name="Personid" ColumnName="Personid" />
           <ScalarProperty Name="Firstname" ColumnName="Firstname" />
           <ScalarProperty Name="Lastname" ColumnName="Lastname" />

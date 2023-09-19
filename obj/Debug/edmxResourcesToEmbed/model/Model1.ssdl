@@ -32,6 +32,7 @@ warning 6013: The table/view 'Test.dbo.ProfileImg' does not have a primary key d
     <Property Name="Country" Type="nvarchar" MaxLength="50" />
     <Property Name="Postal Code" Type="nvarchar" MaxLength="50" />
     <Property Name="About Me" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProfilePicture" Type="varbinary" MaxLength="50" />
   </EntityType>
   <EntityContainer Name="TestModelStoreContainer">
     <EntitySet Name="Shop" EntityType="Self.Shop" Schema="dbo" store:Type="Tables" />
