@@ -7,6 +7,7 @@
     <h1>Users Management</h1>
     <hr />
 
+<<<<<<< HEAD
 
     <asp:GridView CssClass="table table-hover" ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Personid" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnRowDeleting="GridView1_RowDeleting">
         <Columns>
@@ -26,6 +27,9 @@
 
 
     <%-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+=======
+    <%--<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+>>>>>>> 8d553807308cd302df9907cbedac0a39381da7fc
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>--%>
 </asp:Content>
