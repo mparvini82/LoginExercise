@@ -1,11 +1,15 @@
 ﻿using LoginExercise.model;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Net.Http;
 
 namespace LoginExercise
 {
@@ -58,6 +62,28 @@ namespace LoginExercise
         protected void btnClose_Click(object sender, EventArgs e)
         {
             BoxAddProduct.Visible = false;
+        }
+        public static async Task<string> GetFirstImageFromURL(string url)
+        {
+            try
+            {
+                var httpClient = new HttpClient();
+                var html = await httpClient.GetStringAsync(url);
+
+                var regex = new Regex("<img.+?src=[\"'](.+?)[\"'].*?>", RegexOptions.IgnoreCase);
+                var match = regex.Match(html);
+
+                if (match.Success)
+                {
+                    return match.Groups[1].Value;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+
+            return string.Empty;
         }
     }
 }

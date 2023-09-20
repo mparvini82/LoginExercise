@@ -37,15 +37,15 @@ namespace LoginExercise
             }
             else if (currentPage.Equals("Profile.aspx"))
             {
-                nav2.Attributes["class"] = "nav-link active";
+                nav2.Attributes["class"] = "nav-link active bg-warning";
             }
             else if (currentPage.Equals("UsersTable.aspx"))
             {
-                nav3.Attributes["class"] = "nav-link active";
+                nav3.Attributes["class"] = "nav-link active bg-danger";
             }
             else if (currentPage.Equals("Shop.aspx"))
             {
-                nav4.Attributes["class"] = "nav-link active";
+                nav4.Attributes["class"] = "nav-link active bg-success";
             }
             // Add more conditions for other nav items
 
@@ -73,6 +73,10 @@ namespace LoginExercise
 
         }
 
-
+        protected void SignOutBtn_Click(object sender, EventArgs e)
+        {
+            Session["ID"] = null;
+            Response.Redirect("Login.aspx");
+        }
     }
 }
