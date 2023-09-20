@@ -23,17 +23,7 @@ namespace LoginExercise.Pages
                 }
             }
         }
-        protected void MakeAdminButton_Command(object sender, CommandEventArgs e)
-        {
-            int PersonID = int.Parse(e.CommandArgument as string);
-            using (TestEntities db = new TestEntities())
-            {
-
-                var user = db.Users.FirstOrDefault(usr => usr.Personid == PersonID);
-                user.Accesslevel = 1;
-                db.SaveChanges();
-            }
-        }
+        
         protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             using (TestEntities db = new TestEntities())
@@ -63,11 +53,14 @@ namespace LoginExercise.Pages
                     byte[] passwordBytes = Encoding.UTF8.GetBytes(e.NewValues["Password"].ToString());
                     byte[] hashedBytes = sha256.ComputeHash(passwordBytes);
                     string hashedPassword = Convert.ToBase64String(hashedBytes);
+                    CheckBox chkIsActive = (CheckBox)row.FindControl("chkIsActive");
+                    byte accessLevel = chkIsActive.Checked ? (byte)1 : (byte)2;
                     var cat = db.Users.Find(ID);
                     cat.Firstname = updatedName;
                     cat.Lastname = updatedlName;
                     cat.Password = hashedPassword;
                     cat.Email = email;
+                    cat.Accesslevel = accessLevel;
                     db.SaveChanges();
                     GridView1.DataSource = db.Users.ToList();
                     GridView1.EditIndex = -1;
@@ -95,6 +88,11 @@ namespace LoginExercise.Pages
                 GridView1.EditIndex = -1;
                 GridView1.DataBind();
             }
+
+        }
+
+        protected void GridView1_RowCreated(object sender, GridViewRowEventArgs e)
+        {
 
         }
     }

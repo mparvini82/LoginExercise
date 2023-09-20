@@ -7,20 +7,22 @@
     <h1>Users Management</h1>
     <hr />
 
-<<<<<<< HEAD
 
-    <asp:GridView CssClass="table table-hover" ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Personid" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnRowDeleting="GridView1_RowDeleting">
+    <asp:GridView CssClass="table table-hover" ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="Personid" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" OnRowDeleting="GridView1_RowDeleting" OnRowCreated="GridView1_RowCreated">
         <Columns>
-            <asp:CommandField ShowDeleteButton="True" HeaderText="Action" DeleteText="Delete" ShowEditButton="True" EditText="Edit" ControlStyle-CssClass="btn btn-light d-inline" UpdateText="Update" CancelText="Cancel" />
+            <asp:CommandField ShowDeleteButton="True" HeaderText="Action" DeleteText="Delete" ShowEditButton="True" EditText="Edit" ControlStyle-CssClass="btn btn-light d-inline" UpdateText="Update" CancelText="Cancel"/>
             <asp:BoundField DataField="Firstname" HeaderText="First Name" InsertVisible="False" />
             <asp:BoundField DataField="Lastname" HeaderText="Last Name" SortExpression="Name" />
             <asp:BoundField DataField="Email" HeaderText="Email" InsertVisible="False" />
             <asp:BoundField DataField="Password" HeaderText="Password" SortExpression="Name" />
             <asp:TemplateField HeaderText="Admin">
-                <ItemTemplate>
-                    <asp:Button ID="MakeAdminButton" runat="server" Text="Make Admin" CssClass="btn btn-primary" OnCommand="MakeAdminButton_Command" CommandArgument='<%# Eval("PersonID") %>' />
-                </ItemTemplate>
-            </asp:TemplateField>
+            <ItemTemplate>
+                <asp:CheckBox ID="chkIsActive" runat="server" Checked='<%# Eval("Accesslevel").ToString() == "1" %>' Enabled="false" />
+            </ItemTemplate>
+            <EditItemTemplate>
+                <asp:CheckBox ID="chkIsActive" runat="server" Checked='<%# Eval("Accesslevel").ToString() == "1" %>' />
+            </EditItemTemplate>
+        </asp:TemplateField>
         </Columns>
     </asp:GridView>
 
