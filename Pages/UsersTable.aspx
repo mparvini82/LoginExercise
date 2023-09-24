@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="UsersTable.aspx.cs" Inherits="LoginExercise.Pages.UsersTable" %>
+﻿    <%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="UsersTable.aspx.cs" Inherits="LoginExercise.Pages.UsersTable" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -12,9 +12,9 @@
         <Columns>
             <asp:CommandField ShowDeleteButton="True" HeaderText="Action" DeleteText="Delete" ShowEditButton="True" EditText="Edit" ControlStyle-CssClass="btn btn-light d-inline" UpdateText="Update" CancelText="Cancel"/>
             <asp:BoundField DataField="Firstname" HeaderText="First Name" InsertVisible="False" />
-            <asp:BoundField DataField="Lastname" HeaderText="Last Name" SortExpression="Name" />
+            <asp:BoundField DataField="Lastname" HeaderText="Last Name"  />
             <asp:BoundField DataField="Email" HeaderText="Email" InsertVisible="False" />
-            <asp:BoundField DataField="Password" HeaderText="Password" SortExpression="Name" />
+            <asp:BoundField DataField="Password" HeaderText="Password" />
             <asp:TemplateField HeaderText="Admin">
             <ItemTemplate>
                 <asp:CheckBox ID="chkIsActive" runat="server" Checked='<%# Eval("Accesslevel").ToString() == "1" %>' Enabled="false" />
